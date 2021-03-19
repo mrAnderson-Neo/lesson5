@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK:- ++Перечисления
+// MARK:- ++Перечисления//
 enum EngineConditions: String {
     case launched = "Заупщен"
     case switchedOff = "Выключен"
@@ -22,10 +22,10 @@ enum WindowsConditions: String {
     case open = "Окно открыто"
     case close = "Окно закрыто"
 }
-// MARK:- -- Перечисления
+// MARK:- -- Перечисления//
 
 
-// MARK:- ++Протокол Car
+// MARK:- ++Протокол Car//
 protocol Car: class {
     var windowCondition: WindowsConditions{get set}
     var engineCondition: EngineConditions{get set}
@@ -71,10 +71,10 @@ extension Car {
     }
 }
 
-// --Протокол Car
+// --Протокол Car//
 
 
-// MARK:- ++Классы
+// MARK:- ++Классы//
 class SportCar: Car {
     var doorCondition: DoorsConditions
     var engineCondition: EngineConditions
@@ -134,10 +134,10 @@ class TrunkCar: Car {
     }
 }
 
-// --Классы
+// --Классы//
 
 
-//MARK:- ++Расширения класса
+//MARK:- ++Расширения класса//
 extension SportCar: CustomStringConvertible {
     var description: String {
         return getInfoCar() +
@@ -158,9 +158,9 @@ extension TrunkCar: CustomStringConvertible {
     }
 }
 
-// --Расширения класса
+// --Расширения класса//
 
-//MARK:- ++Создаём объекты классов
+//MARK:- ++Создаём объекты классов//
 
 let separator = "========================"
 
@@ -174,3 +174,4 @@ print(separator)
 var trunkCar = TrunkCar(doorCondition: .close, engineCondition: .switchedOff, windowCondition: .open, carWeigth: 10.5)
 trunkCar.setcargoWeigth(2.8)
 print(trunkCar)
+//-- Создаём объекты классов
